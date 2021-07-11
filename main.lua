@@ -50,12 +50,12 @@ function love.draw()
 		text = text .. "        Button " .. i .. ": " .. isDown .. "\n"
 	end
 	text2 = "\n\n\n\n\n\n\n\n\n\n"
-	for i=1,joystick.axesNum do
+	for i=1, math.min(4, joystick.axesNum) do
 		direction = tostring(joystick.obj:getAxis(i))
-		text2 = text2 .. "        Axes " .. i .. ": " .. direction .. "\n"
+		text2 = text2 .. "        Axis " .. i .. ": " .. direction .. "\n"
 	end
 	text2 = text2 .. "\n"
-	for i=1,joystick.hatsNum do
+	for i=1, math.min(1, joystick.hatsNum) do
 		direction = tostring(joystick.obj:getHat(i))
 		
 		if direction == "c" then
@@ -78,7 +78,7 @@ function love.draw()
 			direction = "Up"
 		end
 		
-		text2 = text2 .. "        Hat " .. i .. ": " .. direction .. "\n"
+		text2 = text2 .. "        D-pad " .. i .. ": " .. direction .. "\n"
 	end
 	
 	love.graphics.print(text, 10, 10)
