@@ -17,7 +17,7 @@ function love.joystickadded(joystick)
 end
 
 function love.draw()
-	text = "Press space to go to next Joystick!\nPress enter to let the controller vibrate!\n\n"
+	text = "" --"Press space to go to next Joystick!\nPress enter to let the controller vibrate!\n\n"
 	
 	if love.joystick.getJoystickCount() == 0 then
 		text = text .. "No Joysticks connected."
@@ -25,7 +25,7 @@ function love.draw()
 		return
 	end
 	
-	text = text .. "Joysticks connected: " .. love.joystick.getJoystickCount() .. "\n\n"
+	--text = text .. "Joysticks connected: " .. love.joystick.getJoystickCount() .. "\n\n"
 	
 	joystick = joysticks[currentJoystick]
 	text = text .. "Joystick " .. currentJoystick .. " - " .. joystick.name .. ":\n"
