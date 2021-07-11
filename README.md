@@ -1,10 +1,9 @@
 # Löve2D Joystick Tester
-A simple LÖVE-2D application to test joystick axes, buttons and hats.
-Supports having multiple joysticks at once!
+A simple LÖVE-2D application to test joystick axes, buttons and hats on handheld devices running Arkos.
 
-## Tips
-- Press space to go to the next Joystick!
-- Press enter to test the vibration of the controller!
+# Original by Skayo:
+https://github.com/Skayo/Love2D-Joystick-Tester
+
 
 ## Requires
 - LÖVE 2D - Version 0.10.2 (Super Toast)
