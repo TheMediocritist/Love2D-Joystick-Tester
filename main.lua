@@ -49,12 +49,12 @@ function love.draw()
 		isDown = tostring(joystick.obj:isDown(i))
 		text = text .. "        Button " .. i .. ": " .. isDown .. "\n"
 	end
-	text = text .. "\n"
+	text2 = ""
 	for i=1,joystick.axesNum do
 		direction = tostring(joystick.obj:getAxis(i))
-		text = text .. "        Axes " .. i .. ": " .. direction .. "\n"
+		text2 = text2 .. "        Axes " .. i .. ": " .. direction .. "\n"
 	end
-	text = text .. "\n"
+	text2 = text2 .. "\n"
 	for i=1,joystick.hatsNum do
 		direction = tostring(joystick.obj:getHat(i))
 		
@@ -78,10 +78,11 @@ function love.draw()
 			direction = "Up"
 		end
 		
-		text = text .. "        Hat " .. i .. ": " .. direction .. "\n"
+		text2 = text2 .. "        Hat " .. i .. ": " .. direction .. "\n"
 	end
 	
 	love.graphics.print(text, 10, 10)
+	love.graphics.print(text2, 200, 110)
 end
 
 function love.keypressed(key)
